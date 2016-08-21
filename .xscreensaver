@@ -1,6 +1,6 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.34 for melody on Tue Jun 14 09:40:35 2016.
-# http://www.jwz.org/xscreensaver/
+# Written by xscreensaver-demo 5.35 for melody on Fri Jul 29 15:36:03 2016.
+# https://www.jwz.org/xscreensaver/
 
 timeout:	2:00:00
 cycle:		0:10:00
@@ -161,7 +161,7 @@ programs:								      \
 - GL: 				endgame -root				    \n\
 -				euler2d -root				    \n\
 -				fluidballs -root			    \n\
-  GL: 				flurry -root -fps -preset insane	    \n\
+- GL: 				flurry -root -fps -preset insane	    \n\
 - GL: 				glblur -root				    \n\
 - GL: 				glsnake -root				    \n\
 -				halftone -root				    \n\
@@ -188,7 +188,7 @@ programs:								      \
 -				fontglide -root				    \n\
 - GL: 				gleidescope -root			    \n\
 - GL: 				glknots -root				    \n\
-  GL: 				glmatrix -root				    \n\
+  GL: 				glmatrix -root -fps			    \n\
 - GL: 				glslideshow -root			    \n\
 - GL: 				hypertorus -root			    \n\
 - GL: 				jigglypuff -root			    \n\
@@ -198,7 +198,7 @@ programs:								      \
 - GL: 				polytopes -root				    \n\
 -				pong -root				    \n\
 -				popsquares -root			    \n\
-- GL: 				surfaces -root				    \n\
+  GL: 				surfaces -root				    \n\
 -				xanalogtv -root				    \n\
 -				abstractile -root -speed 4		    \n\
 -				anemotaxis -root			    \n\
@@ -260,6 +260,11 @@ programs:								      \
 - GL: 				winduprobot -root			    \n\
 - GL: 				splitflap -root				    \n\
 -				testx11 -root				    \n\
+  GL: 				dymaxionmap -root			    \n\
+  GL: 				energystream -root			    \n\
+- GL: 				hydrostat -root				    \n\
+  GL: 				raverhoop -root				    \n\
+- GL: 				unicrud -root				    \n\
 
 
 pointerPollTime:    0:00:05
