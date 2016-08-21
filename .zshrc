@@ -6,6 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bira"
+# ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -55,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Base path
 PATH="/usr/local/sbin:/usr/local/bin:/usr/bin"
-MANPATH="/usr/local/man"
+MANPATH="/usr/share/man:/usr/local/share/man:/usr/local/man"
 
 # Perl path
 PATH="/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$PATH"
@@ -69,6 +70,11 @@ export ARCHFLAGS="-arch x86_64"
 # RVM
 PATH="$HOME/.rvm/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# GO
+export GOPATH=$HOME/dev/go
+PATH="$GOPATH/bin:$PATH"
+
 
 # SSH
 export SSH_KEY_PATH="~/.ssh/"
