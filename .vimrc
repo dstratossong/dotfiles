@@ -86,7 +86,7 @@ set matchtime=1
 " r: insert comment leader after <CR>
 " o: insert comment leader after o or O
 set formatoptions-=t
-set formatoptions+=lcro
+set formatoptions+=l
 set textwidth=80
 
 " context while scrolling
