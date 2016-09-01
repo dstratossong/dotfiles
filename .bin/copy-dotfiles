@@ -34,7 +34,8 @@ cp -v .xscreensaver $REPO/
 # Vim Settings
 cp -v .vimrc $REPO/
 
-cp -v .asoundrc $REPO/
+# Atom keymap
+cp -v .atom/keymap.cson $REPO/.atom/
 
 # Git credential-netrc script (vend)
 cp -v /usr/local/bin/git-credential-netrc $REPO/usr/local/bin/
