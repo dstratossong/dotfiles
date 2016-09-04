@@ -9,6 +9,9 @@
 
 "set t_Co=256
 
+set mouse=a
+" set ttymouse=xterm2
+
 " misc options
 " {{{ interface
 " lines, cols in status line

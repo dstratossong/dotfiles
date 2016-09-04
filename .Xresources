@@ -17,6 +17,7 @@ URxvt.scrollWithBuffer:               true
 URxvt.scrollTtyKeypress:              true
 URxvt.secondaryScreen:                1
 URxvt.secondaryScroll:                0
+URxvt.secondaryWheel:                 1
 
 ! --- urxvt.cursor ---
 URxvt.cursorUnderline:                true
