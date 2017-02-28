@@ -31,27 +31,37 @@ feh --randomize --bg-fill -z ~/Dropbox/pictures/wallpapers/*
 case $1 in
   '')
     ;;
-  re)
+  reload|re)
     exit
     ;;
-  duo)
+  extend|duo)
+    xrandr --output VGA1 --off
     xrandr --output VGA1 --auto --right-of eDP1
     feh --randomize --bg-fill -z ~/Dropbox/pictures/wallpapers/*
     exit
     ;;
-  sol)
+  dock)
+    xrandr --output DP2-2 --off
+    xrandr --output DP2-2 --auto --right-of eDP1
+    feh --randomize --bg-fill -z ~/Dropbox/pictures/wallpapers/*
+    exit
+    ;;
+  single|sol)
     xrandr --auto
     exit
     ;;
   *)
-    echo "wrong arguments. accepted: re|duo|sol"
+    echo "wrong arguments. accepted: reload|single|extend"
     exit
     ;;
 esac
 
+source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+
 # --- processes ---
 compton --config ~/.compton.conf -b
 dropboxd &
+pamusb-agent &
 xscreensaver -no-splash &
 syndaemon -i 0.2 -k &
 urxvtd -q -o -f
