@@ -67,14 +67,17 @@ export LANG=en_US.UTF-8
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-# RVM
-PATH="$HOME/.rvm/bin:$PATH"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 # GO
 export GOPATH=$HOME/dev/go
 PATH="$GOPATH/bin:$PATH"
 
+# Ruby
+export PATH="$HOME/.gem/ruby/2.4.0/bin:$PATH"
+
+# PGSQL
+# export PGROOT="$HOME/data/postgresql"
+# export PGROOT="/var/lib/postgres"
+export PGDATA="$HOME/data/postgresql"
 
 # SSH
 export SSH_KEY_PATH="~/.ssh/"
@@ -98,6 +101,9 @@ export EDITOR=vi
 # User Scripts
 PATH=$HOME/.bin:$HOME/.local/scripts:$PATH
 
+# Preload for Spotify (wm)
+# export LD_PRELOAD=/usr/lib/libcurl.so.3:/home/melody/dev/spotifywm/spotifywm.so # /usr/share/spotify/spotify
+
 # Key Bindings
 bindkey -M emacs 'C;BS~' backward-kill-word 
 bindkey -M emacs 'C;DEL~' kill-word
@@ -115,5 +121,3 @@ export MANPATH
 
 # Welcome Message
 # fortune -a  | lolcat
-
-
