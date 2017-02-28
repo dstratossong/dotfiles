@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for id in `xdotool search --name "i3lock"`; do
+  xdotool key --window $id Return
+done

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+pics="$HOME/Dropbox/pictures/widescreen"
+
+random_pic=`ls ${pics}/*.png | shuf -n 1`
+
+i3lock -i "$random_pic" -c '#000000'
