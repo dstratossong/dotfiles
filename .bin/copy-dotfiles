@@ -1,41 +1,49 @@
 #!/bin/bash
 
-REPO=~/dev/dotfiles
+repo=~/dev/dotfiles
 
 cd ~
 
 # Bash
-cp -v .bash_profile .bashrc .profile $REPO/
+cp -v .bash_profile .bashrc .profile $repo/
 
 # Zsh
-cp -v .zlogin .zshrc $REPO/
+cp -v .zlogin .zshrc $repo/
 
 # Local scripts
-cp -v -r .bin $REPO/
+cp -v -r .bin $repo/
 
 # Xorg and misc
-cp -v .xinitrc .xmobarrc .Xmodmap .Xresources .compton.conf $REPO/
+cp -v .xinitrc .xmobarrc .Xmodmap .Xresources .compton.conf $repo/
 
 # Xorg (global)
-cp -v /etc/X11/xorg.conf $REPO/etc/X11/
+cp -v /etc/X11/xorg.conf $repo/etc/X11/
 
 # Intel Driver
-cp -v /etc/X11/xorg.conf.d/20-intel.conf $REPO/etc/X11/xorg.conf.d/
+cp -v /etc/X11/xorg.conf.d/20-intel.conf $repo/etc/X11/xorg.conf.d/
 
 # Xmonad
-cp -v .xmonad/xmonad.hs $REPO/.xmonad/
+cp -v .xmonad/xmonad.hs $repo/.xmonad/
 
 # Pacman
-cp -v /etc/pacman.conf $REPO/etc/
+cp -v /etc/pacman.conf $repo/etc/
 
 # Screensaver
-cp -v .xscreensaver $REPO/
+cp -v .xscreensaver $repo/
 
 # Vim Settings
-cp -v .vimrc $REPO/
+cp -v .vimrc $repo/
 
 # Atom keymap
-cp -v .atom/keymap.cson $REPO/.atom/
+cp -v .atom/keymap.cson $repo/.atom/
 
 # Git credential-netrc script (vend)
-cp -v /usr/local/bin/git-credential-netrc $REPO/usr/local/bin/
+cp -v /usr/local/bin/git-credential-netrc $repo/usr/local/bin/
+
+# Pam USB
+cp -v /etc/pamusb.conf $repo/etc/
+
+# 
+
+
+cd -
