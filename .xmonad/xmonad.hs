@@ -20,7 +20,7 @@ import qualified Data.Map        as M
 import qualified XMonad.StackSet as W
 
 -- workspace
-myWorkspaces = ["main", "web", "code", "aux", "test", "wall", "comm", "music", "misc"]
+myWorkspaces = ["sh", "web", "code", "aux", "proc", "wall", "comm", "music", "misc"]
 
 -- management
 myManageHook = composeAll
@@ -31,7 +31,12 @@ myManageHook = composeAll
     , className =? "lighttable"      --> doShift "code"
     , className =? "atom"            --> doShift "code"
     , className =? "Atom"            --> doShift "code"
+    , className =? "slack"           --> doShift "comm"
+    , className =? "Slack"           --> doShift "comm"
     , className =? "drracket"        --> doShift "code"
+    , className =? "spotify"         --> doShift "music"
+    , className =? "Spotify"         --> doShift "music"
+    -- , className =? ""                --> doShift "music"
     , isFullscreen                   --> doFullFloat ]
 
 -- layout
@@ -94,7 +99,10 @@ main = do
     `additionalKeys`
 
     [ ((0, xK_Print),                     -- print screen
-       spawn "scrot ~/Dropbox/pictures/screenshots/scrot-%Y-%m-%d-%T.png")
+       spawn "scrot --delay 0.2 ~/Dropbox/pictures/screenshots/scrot-%Y-%m-%d-%T.png")
+
+    , ((mod4Mask, xK_Print),              -- capture screen
+       spawn "sleep 0.2; scrot --delay 0.2 --select ~/Dropbox/pictures/screenshots/scrot-capture-%Y-%m-%d-%T.png")
 
     , ((0, xK_Mode_switch),               -- launch
        spawn "dmenu_run")
@@ -120,13 +128,25 @@ main = do
     , ((0, xF86XK_AudioMute),             -- volume mute
        spawn "amixer -D pulse set Master toggle")
 
+    , ((0, xF86XK_AudioPlay),             -- spotify play/pause
+       spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")
+
+    , ((0, xF86XK_AudioStop),             -- spotify stop
+       spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop")
+
+    , ((0, xF86XK_AudioNext),             -- spotify next
+       spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next")
+
+    , ((0, xF86XK_AudioPrev),             -- spotify prev
+       spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous")
+
     , ((0, 0x1008FFB2),                   -- mic mute
        spawn "amixer -D pulse set Capture toggle")
 
     , ((0, xF86XK_ScreenSaver),           -- lock screen
-       spawn "xscreensaver-command --lock")
+       spawn "/home/melody/.bin/lock")
 
     , ((mod4Mask .|. shiftMask, xK_l),    -- lock screen
-       spawn "xscreensaver-command --lock")
+       spawn "/home/melody/.bin/lock")
 
     ]

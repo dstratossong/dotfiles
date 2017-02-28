@@ -4,8 +4,9 @@ Config {
       font                     = "xft:Bitstream Vera Sans Mono:pixelsize=11:antialias=true"
     , bgColor                  = "black"
     , fgColor                  = "#70FFFE"
-    , alpha                    = 199
+    , alpha                    = 230
     , position                 = Top
+--    , position                 = Bottom
 
     -- layout
     , sepChar                  = "%"
@@ -30,6 +31,7 @@ Config {
                              , "--low"      , "#CCFF7D"
                              , "--normal"   , "#90E897"
                              , "--high"     , "#B3FFE5"
+                             --, "-w"         , "3"
                              ] 10
 
         -- cpu activity monitor
@@ -39,11 +41,12 @@ Config {
                              , "--low"      , "#CCFF7D"
                              , "--normal"   , "#E8DA4D"
                              , "--high"     , "#FFBC1E"
+                             --, "-w"         , "2"
                              ] 10
 
         -- memory usage monitor
         , Run Memory         [ "--template" ,"<usedratio>%"
-                             , "--Low"      , "20"        -- units: %
+                             , "--Low"      , "60"        -- units: %
                              , "--High"     , "90"        -- units: %
                              , "--low"      , "#CCFF7D"
                              , "--normal"   , "#E8DA4D"

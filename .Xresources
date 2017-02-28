@@ -7,8 +7,11 @@ Xcursor.size:                         16
 
 ! --- urxvt.background ---
 URxvt.depth:                          32
-URxvt.background:                     [85]#000000
+URxvt.background:                     [90]#000000
+!URxvt.background: rgba:2600/3200/3800/cccc
 URxvt.transparent:                    false
+!URxvt.shading: 40
+!URxvt.blurRadius:                     30
 
 ! --- urxvt.scroll ---
 URxvt.scrollBar:                      false
@@ -19,6 +22,10 @@ URxvt.secondaryScreen:                1
 URxvt.secondaryScroll:                0
 URxvt.secondaryWheel:                 1
 
+! --- urxvt.url ---
+URxvt.matcher.button:                 1
+URxvt.urlLauncher:                    /usr/bin/xdg-open
+
 ! --- urxvt.cursor ---
 URxvt.cursorUnderline:                true
 URxvt.cursorBlink:                    true
@@ -26,10 +33,18 @@ URxvt.cursorBlink:                    true
 ! --- urxvt.font ---
 URxvt.font:                           xft:DejaVu Sans Mono:pixelsize=14
 URxvt.boldFont:                       xft:DejaVu Sans Mono:bold:pixelsize=14
+! URxvt.font:                           xft:DejaVu Sans Mono for Powerline:pixelsize=14
+! URxvt.boldFont:                       xft:DejaVu Sans Mono for Powerline:bold:pixelsize=14
+! URxvt.font:                           xft:Source Code Pro for Powerline:pixelsize=14
+! URxvt.boldFont:                       xft:Source Code Pro for Powerline:bold:pixelsize=14
+! URxvt.font:                           xft:Meslo LG S for Powerline:pixelsize=14
+! URxvt.boldFont:                       xft:Meslo LG S for Powerline:bold:pixelsize=14
 
 ! --- urxvt.spacing ---
 URxvt.letterSpace:                    -2
+! URxvt.letterSpace:                    -2
 URxvt.lineSpace:                      1
+! URxvt.lineSpace:                      1
 
 ! --- urxvt.foreground ---
 ! URxvt.foreground:                     #DDDDDD
