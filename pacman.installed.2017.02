@@ -1,0 +1,108 @@
+community/acpi 1.7-1
+extra/alsa-firmware 1.0.29-1
+extra/alsa-utils 1.1.3-2
+community/atom 1.14.3-1
+core/autoconf 2.69-4 (base-devel)
+community/autofs 5.1.2-1
+core/automake 1.15-2 (base-devel)
+core/bison 3.0.4-2 (base-devel)
+local/caret-bin 1.12.2-1
+community/cloc 1.72-1
+extra/cmake 3.7.2-1
+community/cmus 2.7.1-8
+community/compton 0.1_beta2.5-4
+community/crystal 0.20.5-1
+community/docker-compose 1.11.2-1
+local/dropbox-experimental 18.3.29-1
+community/dunst 1.1.0-1
+extra/evince 3.22.1-1 (gnome)
+core/fakeroot 1.21-2 (base-devel)
+extra/feh 2.18.2-1
+core/flex 2.6.3-1 (base-devel)
+extra/font-bh-ttf 1.0.3-3
+extra/font-bitstream-speedo 1.0.2-2
+community/font-mathematica 9.0-5
+local/fontconfig-enhanced-defaults 20160430-1
+extra/geeqie 1.3-1
+extra/gnu-free-fonts 20120503-4
+local/google-chrome 55.0.2883.87-1
+core/grub 1:2.02.rc1-1
+community/i3lock 2.8-1 (i3)
+extra/intel-ucode 20161104-1
+core/iputils 20161105.1f2bb12-1 (base)
+core/iw 4.9-1
+core/jfsutils 1.1.15-4 (base)
+extra/libreoffice-fresh 5.3.0-2
+core/licenses 20140629-1 (base)
+local/light 1.0-2
+core/logrotate 3.11.0-1 (base)
+core/lvm2 2.02.168-1 (base)
+core/make 4.2.1-1 (base-devel)
+core/man-db 2.7.6.1-2 (base)
+core/man-pages 4.09-1 (base)
+core/mdadm 3.4-1 (base)
+community/moreutils 0.60-1
+core/nano 2.7.5-1 (base)
+core/netctl 1.12-2 (base)
+extra/nginx 1.10.3-2
+extra/ntp 4.2.8.p9-1
+extra/openconnect 1:7.08-1
+community/opendesktop-fonts 1.4.2-4
+core/openldap 2.4.44-3
+local/pam_usb 0.5.0-4
+community/pass 1.6.5-2
+core/patch 2.7.5-1 (base-devel)
+core/pcmciautils 018-7 (base)
+core/pkg-config 0.29.1-2 (base-devel)
+extra/postgresql 9.6.1-3
+core/reiserfsprogs 3.6.25-1 (base)
+local/rxvt-unicode-better-wheel-scrolling 9.22-2
+community/screenfetch 3.7.0-1
+local/slack-desktop 2.4.2-1
+local/spotify 1.0.47.13-1
+community/sshfs 2.8-1
+core/sudo 1.8.19.p2-1 (base-devel)
+community/sysstat 11.4.0-1
+community/terminus-font 4.40-3
+community/termite 12-1
+core/traceroute 2.1.0-1
+community/transset-df 6-5
+community/ttf-gentium 1.03-3
+community/ttf-hanazono 20160201-2
+extra/ttf-hannom 2005-4
+community/ttf-ionicons 2.0.1-2
+local/ttf-mac-fonts 20100901.134-1
+local/ttf-meslo 1.2.1-1
+local/ttf-monaco 6.1-3
+extra/ttf-sazanami 20040629-9
+community/ttf-symbola 9.00-1
+local/ttf-vista-fonts 1-8
+core/usbutils 008-1 (base)
+community/vagrant 1.9.1-1
+core/vi 1:070224-2 (base)
+extra/vim 8.0.0329-1
+community/virtualbox 5.1.14-3
+extra/vlc 2.2.4-7
+core/which 2.21-2 (base base-devel)
+local/x3270 3.5ga8-2
+extra/xcursor-themes 1.0.4-1
+community/xdotool 3.20160805.1-1
+extra/xf86-input-synaptics 1.9.0-1 (xorg-drivers)
+extra/xf86-video-intel 1:2.99.917+757+g93942b7d-1 (xorg-drivers)
+core/xfsprogs 4.9.0-1 (base)
+community/xmobar 0.24.3-5
+community/xmonad-contrib 0.13-1
+extra/xorg-fonts-100dpi 1.0.3-3 (xorg)
+extra/xorg-fonts-75dpi 1.0.3-3 (xorg)
+extra/xorg-fonts-cyrillic 1.0.3-2
+extra/xorg-fonts-type1 7.7-2
+extra/xorg-xev 1.2.2-1 (xorg-apps xorg)
+extra/xorg-xfontsel 1.0.5-1
+extra/xorg-xinit 1.3.4-4
+extra/xorg-xlsfonts 1.0.5-1
+extra/xorg-xrandr 1.5.0-1 (xorg-apps xorg)
+extra/xorg-xsetroot 1.1.1-2 (xorg-apps xorg)
+local/xscreensaver-arch-logo 5.36-1
+local/yaourt 1.8.1-1
+extra/zip 3.0-7
+community/zsh-syntax-highlighting 0.5.0-1

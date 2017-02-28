@@ -12,6 +12,9 @@ Shell: Zsh
 Network Manager: Netctl
 
 My entire list of installed packages is kept in `pacman.installed.20xx.xx`
+```
+yaourt -Qet > pacman.installed.20xx.xx
+```
 
 Getting all Atom packages and installing them: 
 ```
