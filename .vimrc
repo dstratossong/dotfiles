@@ -13,6 +13,9 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 " Lisp
 Plug 'bhurlow/vim-parinfer'
 
+" TypeScript
+Plug 'leafgarland/typescript-vim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -26,8 +29,13 @@ nnoremap <F2> :set nonumber! norelativenumber! <CR>
 
 " Common typos
 command! Wq wq
+command! WQ wq
 command! W w
 command! Q q
+
+" Case Insensitive
+set ignorecase
+set smartcase
 
 " Tabs
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
