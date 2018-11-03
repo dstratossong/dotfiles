@@ -11,10 +11,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " Lisp
-Plug 'bhurlow/vim-parinfer'
+" Plug 'bhurlow/vim-parinfer'
 
 " TypeScript
-Plug 'leafgarland/typescript-vim'
+" Plug 'leafgarland/typescript-vim'
 
 " Initialize plugin system
 call plug#end()
@@ -32,10 +32,17 @@ command! Wq wq
 command! WQ wq
 command! W w
 command! Q q
+command! Tabf tabf
+command! Tabn tabn
+command! Tabp tabp
 
 " Case Insensitive
 set ignorecase
 set smartcase
 
 " Tabs
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+" Highlight
+highlight CursorLine cterm=NONE ctermbg=black guibg=black
+set cursorline
