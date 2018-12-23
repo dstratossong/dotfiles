@@ -15,7 +15,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --gocode-completer --tern-completer' }
 
 " Lisp
-Plug 'bhurlow/vim-parinfer'
+" Plug 'bhurlow/vim-parinfer'
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
@@ -29,6 +29,9 @@ cnoreabbrev Wq w<bar>Sayonara
 cnoreabbrev WQ w<bar>Sayonara
 cnoreabbrev q Sayonara
 cnoreabbrev Q Sayonara
+
+" TypeScript
+" Plug 'leafgarland/typescript-vim'
 
 " Initialize plugin system
 call plug#end()
@@ -47,13 +50,18 @@ command! W w
 " command! Wq wq
 " command! Q q
 " command! WQ wq
+command! Q q
+" Tabs
+" command! Tabf tabf
+" command! Tabn tabn
+" command! Tabp tabp
 
 " Case insensitive
 set ignorecase
 set smartcase
 
 " Tabs
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " New buffer
 map  :enew<CR>
@@ -62,3 +70,6 @@ map  :enew<CR>
 map [5;5~ :bprevious<CR>
 map [6;5~ :bnext<CR>
 
+" Highlight
+highlight CursorLine cterm=NONE ctermbg=black guibg=black
+set cursorline
