@@ -5,8 +5,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bira"
+# ZSH_THEME="bira"
 # ZSH_THEME="agnoster"
+ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -46,7 +47,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins+=()
+plugins+=(zsh-completions zsh-syntax-highlighting)
 
 autoload -Uz compinit && compinit
 
@@ -55,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Base path
-PATH="/usr/local/sbin:/usr/local/bin:/usr/bin"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin"
 MANPATH="/usr/share/man:/usr/local/share/man:/usr/local/man"
 
 # Perl path
@@ -71,8 +72,9 @@ export ARCHFLAGS="-arch x86_64"
 export GOPATH=$HOME/dev/go
 PATH="$GOPATH/bin:$PATH"
 
-# Ruby
-export PATH="$HOME/.gem/ruby/2.4.0/bin:$PATH"
+# Rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # PGSQL
 # export PGROOT="$HOME/data/postgresql"
@@ -84,7 +86,7 @@ export SSH_KEY_PATH="~/.ssh/"
 source ~/.bin/.ssh_completion_zsh
 
 # Shell Command Highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # PostgreSQL
 export LD_LIBRARY_PATH=/usr/local/pgsql/lib
@@ -107,6 +109,8 @@ PATH=$HOME/.bin:$HOME/.local/scripts:$PATH
 # Key Bindings
 bindkey -M emacs 'C;BS~' backward-kill-word 
 bindkey -M emacs 'C;DEL~' kill-word
+bindkey -M emacs '' backward-kill-word 
+bindkey -M emacs '[3;5~' kill-word
 
 # Aliases
 alias ll="ls -laG"
