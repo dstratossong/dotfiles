@@ -6,8 +6,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="bira"
-ZSH_THEME="agnoster"
-# ZSH_THEME="ys"
+# ZSH_THEME="agnoster"
+ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -47,8 +47,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins+=(zsh-completions zsh-syntax-highlighting)
-
+plugins+=(zsh-completions zsh-syntax-highlighting)  # zsh-syntax-highlighting must be the last one
 autoload -Uz compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
@@ -73,8 +72,8 @@ export GOPATH=$HOME/dev/go
 PATH="$GOPATH/bin:$PATH"
 
 # Rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
 
 # PGSQL
 # export PGROOT="$HOME/data/postgresql"
@@ -85,7 +84,7 @@ export PGDATA="$HOME/data/postgresql"
 export SSH_KEY_PATH="~/.ssh/"
 source ~/.bin/.ssh_completion_zsh
 
-# Shell Command Highlighting
+# Shell Command Highlighting (not needed, part of plugins)
 # source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # PostgreSQL
