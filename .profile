@@ -16,5 +16,5 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set PATH so it includes user's private bin directories
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+export SHELL=`which zsh`
+[ -z "$ZSH_VERSION" ] && exec "$SHELL" -l

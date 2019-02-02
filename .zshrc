@@ -6,8 +6,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="bira"
-# ZSH_THEME="agnoster"
-ZSH_THEME="ys"
+ZSH_THEME="agnoster"
+# ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -96,6 +96,9 @@ MANPATH="/usr/local/pgsql/man:$MANPATH"
 # Editor
 export EDITOR=vi
 
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # SDKs
 # PATH=$HOME/dev/SDKs/android-sdk-linux/tools:$PATH   # Android
 # PATH=$HOME/dev/SDKs/activator-dist-1.3.6:$PATH      # Typesafe Activator
@@ -107,9 +110,9 @@ PATH=$HOME/.bin:$HOME/.local/scripts:$PATH
 # export LD_PRELOAD=/usr/lib/libcurl.so.3:/home/melody/dev/spotifywm/spotifywm.so # /usr/share/spotify/spotify
 
 # Key Bindings
-bindkey -M emacs 'C;BS~' backward-kill-word 
+bindkey -M emacs 'C;BS~' backward-kill-word
 bindkey -M emacs 'C;DEL~' kill-word
-bindkey -M emacs '' backward-kill-word 
+bindkey -M emacs '' backward-kill-word
 bindkey -M emacs '[3;5~' kill-word
 
 # Aliases

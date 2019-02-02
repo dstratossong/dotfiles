@@ -34,6 +34,9 @@ cp -v .xscreensaver $repo/
 # Vim Settings
 cp -v .vimrc $repo/
 
+# Tmux Settings
+cp -v .tmux.conf $repo/
+
 # Atom keymap
 cp -v .atom/keymap.cson $repo/.atom/
 
@@ -42,8 +45,6 @@ cp -v /usr/local/bin/git-credential-netrc $repo/usr/local/bin/
 
 # Pam USB
 cp -v /etc/pamusb.conf $repo/etc/
-
-# 
 
 
 cd -
