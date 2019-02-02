@@ -74,10 +74,10 @@ nnoremap <F2> :set nonumber! norelativenumber! <CR>
 " command! Tabp tabp
 
 " Navigate buffers
-nnoremap [1;7D :bprevious<CR>
-nnoremap [1;5D :bprevious<CR>
-nnoremap [1;7C :bnext<CR>
-nnoremap [1;5C :bnext<CR>
+" nnoremap [1;7D :bprevious<CR>
+" nnoremap [1;5D :bprevious<CR>
+" nnoremap [1;7C :bnext<CR>
+" nnoremap [1;5C :bnext<CR>
 nnoremap <C-j> :bnext<CR>
 nnoremap <C-k> :bprevious<CR>
 nnoremap <C-t> :enew<CR>
