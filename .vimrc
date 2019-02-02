@@ -44,6 +44,7 @@ cnoreabbrev WQ w<bar>Sayonara
 cnoreabbrev q Sayonara
 cnoreabbrev Q Sayonara
 cnoreabbrev qq q
+cnoreabbrev E e
 
 " TypeScript
 " Plug 'leafgarland/typescript-vim'
@@ -80,6 +81,8 @@ nnoremap <F2> :set nonumber! norelativenumber! <CR>
 " nnoremap [1;5C :bnext<CR>
 nnoremap <C-j> :bnext<CR>
 nnoremap <C-k> :bprevious<CR>
+nnoremap <C-l> :bnext<CR>
+nnoremap <C-h> :bprevious<CR>
 nnoremap <C-t> :enew<CR>
 
 " Keep multiple buffers unsaved

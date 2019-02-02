@@ -47,7 +47,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins+=(zsh-completions zsh-syntax-highlighting)  # zsh-syntax-highlighting must be the last one
+plugins+=(zsh-completions zsh-syntax-highlighting)  # zsh-syntax-highlighting must be at the end
 autoload -Uz compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
@@ -84,9 +84,6 @@ export PGDATA="$HOME/data/postgresql"
 export SSH_KEY_PATH="~/.ssh/"
 source ~/.bin/.ssh_completion_zsh
 
-# Shell Command Highlighting (not needed, part of plugins)
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # PostgreSQL
 export LD_LIBRARY_PATH=/usr/local/pgsql/lib
 PATH="/usr/local/pgsql/bin:$PATH"
@@ -103,7 +100,7 @@ export EDITOR=vi
 # PATH=$HOME/dev/SDKs/activator-dist-1.3.6:$PATH      # Typesafe Activator
 
 # User Scripts
-PATH=$HOME/.bin:$HOME/.local/scripts:$PATH
+PATH=$HOME/bin:$HOME/.bin:$HOME/.local/scripts:$HOME/.local/bin:$PATH
 
 # Preload for Spotify (wm)
 # export LD_PRELOAD=/usr/lib/libcurl.so.3:/home/melody/dev/spotifywm/spotifywm.so # /usr/share/spotify/spotify
