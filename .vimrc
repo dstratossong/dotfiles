@@ -16,7 +16,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='deus'
 let g:airline#extensions#branch#enabled = 1
 
-" Fugitive
+" Fugitive (git)
 Plug 'tpope/vim-fugitive'
 
 " Autocompletion
@@ -28,6 +28,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " Lisp
 Plug 'tpope/vim-fireplace'
+" Plug 'bhurlow/vim-parinfer'
 
 " Fuzzy Finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
