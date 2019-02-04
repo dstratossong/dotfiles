@@ -1,6 +1,3 @@
-set encoding=utf-8
-set t_Co=256
-
 " Vim-Plug
 call plug#begin('~/.vim/plugged')
 
@@ -104,4 +101,13 @@ set hlsearch
 
 " Use theme
 colorscheme deus
+
+" Set Encoding
+set encoding=utf-8
+
+" Set Colors
+set t_Co=256
+
+" Enable mouse
+set mouse=a
 
