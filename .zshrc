@@ -1,3 +1,5 @@
+# --- oh-my-zsh Configuration ---
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -28,7 +30,8 @@ DISABLE_AUTO_UPDATE="true"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+# Currently an open issue that affects Debian: https://github.com/robbyrussell/oh-my-zsh/issues/5765
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -43,7 +46,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# User configuration
+# Moved plugins to the end (some of them change $PATH)
+
+# --- User Configuration ---
 
 # Base path
 PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin"
@@ -76,7 +81,8 @@ export PGDATA="$HOME/data/postgresql"
 
 # SSH
 export SSH_KEY_PATH="~/.ssh/"
-source ~/.bin/.ssh_completion_zsh
+# This is now supported natively by Zsh
+# source ~/.bin/.ssh_completion_zsh
 
 # PostgreSQL
 export LD_LIBRARY_PATH=/usr/local/pgsql/lib
@@ -85,9 +91,6 @@ MANPATH="/usr/local/pgsql/man:$MANPATH"
 
 # Editor
 export EDITOR=vi
-
-# FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # SDKs
 # PATH=$HOME/dev/SDKs/android-sdk-linux/tools:$PATH   # Android
@@ -119,13 +122,13 @@ export MANPATH
 # Welcome Message
 # fortune -a  | lolcat
 
+# --- oh-my-zsh Plugins ---
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins+=(nvm rbenv zsh-syntax-highlighting)  # zsh-syntax-highlighting must be at the end
-# zsh-completions
+plugins+=(nvm rbenv fzf zsh-completions zsh-syntax-highlighting)  # zsh-syntax-highlighting must be at the end
 autoload -Uz compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
