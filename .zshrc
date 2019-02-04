@@ -43,15 +43,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins+=(zsh-completions zsh-syntax-highlighting)  # zsh-syntax-highlighting must be at the end
-autoload -Uz compinit && compinit
-
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # Base path
@@ -71,9 +62,12 @@ export ARCHFLAGS="-arch x86_64"
 export GOPATH=$HOME/dev/go
 PATH="$GOPATH/bin:$PATH"
 
-# Rbenv
+# Rbenv (put into plugin)
 # export PATH="$HOME/.rbenv/bin:$PATH"
-# eval "$(rbenv init -)"
+# eval "$(rbenv init - zsh)"
+
+# Anaconda (Python)
+PATH="$HOME/anaconda3/bin:$PATH"
 
 # PGSQL
 # export PGROOT="$HOME/data/postgresql"
@@ -124,3 +118,14 @@ export MANPATH
 
 # Welcome Message
 # fortune -a  | lolcat
+
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins+=(nvm rbenv zsh-syntax-highlighting)  # zsh-syntax-highlighting must be at the end
+# zsh-completions
+autoload -Uz compinit && compinit
+
+source $ZSH/oh-my-zsh.sh
