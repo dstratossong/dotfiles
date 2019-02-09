@@ -50,8 +50,9 @@ cnoreabbrev E e
 " Whitespace
 Plug 'ntpeters/vim-better-whitespace'
 
-" Theme
+" Themes
 Plug 'ajmwagar/vim-deus'
+Plug 'sickill/vim-monokai'
 
 " Initialize plugin system
 call plug#end()
@@ -86,7 +87,7 @@ nnoremap <C-t> :enew<CR>
 " Keep multiple buffers unsaved
 set hidden
 
-" Case Insensitive
+" Case insensitive
 set ignorecase
 set smartcase
 
@@ -102,10 +103,10 @@ set hlsearch
 " Use theme
 colorscheme deus
 
-" Set Encoding
+" Set encoding
 set encoding=utf-8
 
-" Set Colors
+" Set colors
 set t_Co=256
 
 " Enable mouse
