@@ -13,11 +13,15 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='deus'
 let g:airline#extensions#branch#enabled = 1
 
+" Fix fixed-width character
+let g:airline_symbols = {}
+let g:airline_symbols.linenr = '¶'
+
 " Fugitive (git)
 Plug 'tpope/vim-fugitive'
 
 " Autocompletion
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py' }
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 
 " Go

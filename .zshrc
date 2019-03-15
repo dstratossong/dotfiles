@@ -114,6 +114,7 @@ alias vi="vim"
 open () { nohup xdg-open "$@" 2>&1 >/dev/null & }
 alias rm="rm -i"
 alias mv="mv -i"
+alias cp="cp -i"
 
 # Export paths
 export PATH
